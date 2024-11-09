@@ -1,0 +1,16 @@
+Group gSensorPresenciaMwDiy       	    "Sensor presencia mw diy"   <switch>        (gSystem)       ["Property"]
+Group gSensorPresenciaMwDiy_RadarMovDistance    "Moving distance cm"    <motion>        (gSystem)   ["Property"]
+Group gSensorPresenciaMwDiy_RadarStillDistance  "Still distance cm"     <motion>        (gSystem)   ["Property"]
+Group gSensorPresenciaMwDiy_RadarMovEnergy      "Moving energy"         <motion>        (gSystem)   ["Property"]
+Group gSensorPresenciaMwDiy_RadarStillEnergy    "Still energy"          <motion>        (gSystem)   ["Property"]
+Group gSensorPresenciaMwDiy_RadarDetectDistance "Detection distance cm" <motion>        (gSystem)   ["Property"]
+
+Group gDevPresenciaSala                     "Presencia sala"                <motion>        (gDevPresenciaCasa, glocSala)     ["NetworkAppliance"]
+Switch ICDur_PresenSala_RadarTarget         "Target [%s]"                   <motion>        (gSensorPresenciaMwDiy, gDevPresenciaSala)   {channel="esphome:device:presence1:radar_target"}
+Switch ICDur_PresenSala_RadarMovingTarget   "Moving target [%s]"            <motion>        (gSensorPresenciaMwDiy, gDevPresenciaSala)   {channel="esphome:device:presence1:radar_moving_target"}
+Switch ICDur_PresenSala_RadarStillTarget    "Still target [%s]"             <motion>        (gSensorPresenciaMwDiy, gDevPresenciaSala)   {channel="esphome:device:presence1:radar_still_target"}
+Number ICDur_PresenSala_RadarMovDistance    "Moving distance [%.1f cm]"     <motion>        (gSensorPresenciaMwDiy, gDevPresenciaSala,gSensorPresenciaMwDiy_RadarMovDistance)       {channel="esphome:device:presence1:radar_moving_distance"}
+Number ICDur_PresenSala_RadarStillDistance  "Still distance [%.1f cm]"      <motion>        (gSensorPresenciaMwDiy, gDevPresenciaSala,gSensorPresenciaMwDiy_RadarStillDistance)     {channel="esphome:device:presence1:radar_still_distance"}
+Number ICDur_PresenSala_RadarMovEnergy      "Moving energy [%.1f %%]"       <motion>        (gSensorPresenciaMwDiy, gDevPresenciaSala,gSensorPresenciaMwDiy_RadarMovEnergy)         {channel="esphome:device:presence1:radar_move_energy"}
+Number ICDur_PresenSala_RadarStillEnergy    "Still energy [%.1f %%]"        <motion>        (gSensorPresenciaMwDiy, gDevPresenciaSala,gSensorPresenciaMwDiy_RadarStillEnergy)       {channel="esphome:device:presence1:radar_still_energy"}
+Number ICDur_PresenSala_RadarDetectDistance "Detection distance [%.1f cm]"  <motion>        (gSensorPresenciaMwDiy, gDevPresenciaSala,gSensorPresenciaMwDiy_RadarDetectDistance)    {channel="esphome:device:presence1:radar_detection_distance"}

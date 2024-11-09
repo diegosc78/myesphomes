@@ -1,0 +1,6 @@
+
+Thing esphome:device:presence1  "ESPHome Presence" [    hostname="192.168.68.110", 
+                                                        encryptionKey="gkROOOAh0xAjCVobOvDVZfPfezQvMEaK9FT1UJEshVU=", 
+                                                        pingInterval=10, maxPingTimeouts=4, 
+                                                        server="ld2410", 
+                                                        logPrefix="esppresence1", deviceLogLevel="INFO" ]
